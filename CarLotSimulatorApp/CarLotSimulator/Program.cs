@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -6,6 +7,32 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            var carLot = new CarLot();
+            var car1 = new Car() { Make = "Ford", Model = "Mustang", Year = 1965, IsDriveable = true};
+            var car2 = new Car();
+            var car3 = new Car()
+            {
+                Make = "Honda",
+                Model = "Civic",
+                Year = 1972,
+                IsDriveable = true,
+            };
+
+            car2.Make = "Chevorlet";
+            car2.Model = "Corvette";
+            car2.Year = 1953;
+            car2.IsDriveable = true;
+
+            carLot.Cars = new List<Car>();
+            carLot.Cars.Add(car1);
+            carLot.Cars.Add(car2);
+            carLot.Cars.Add(car3);
+
+            foreach (var car in carLot.Cars)
+            {
+                Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
+            }
+
             //TODO
 
             //Create a seperate class file called Car
