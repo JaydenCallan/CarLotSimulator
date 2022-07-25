@@ -1,23 +1,32 @@
 ﻿using System;
-public class Car
+using System.Collections.Generic;
+
+namespace CarLotSimulator
 {
-	public Car()
+	public class Car
 	{
+		public List<CarLot> Cars { get; set; }
+
+		public Car()
+		{
+			CarLot.NumberOfCars++;
+		}
+
+		public int Year { get; set; }
+		public string Make { get; set; }
+		public string Model { get; set; }
+		public string EngineNoise { get; set; } = "Vroom";
+		public string HonkNoise { get; set; } = "Beep";
+		public bool IsDriveable { get; set; }
+
+		public void MakeEngineNoise()
+		{
+			Console.WriteLine(EngineNoise);
+		}
+		public void MakeHonkNoise()
+		{
+			Console.WriteLine(HonkNoise);
+		}
 	}
 
-	public int Year { get; set; }
-	public string Make { get; set; }
-	public string Model { get; set; }
-	public string EngineNoise { get; set; } = "Vroom";
-	public string HonkNoise { get; set; } = "Beep";
-	public bool IsDriveable { get; set; }
-
-	public void MakeEngineNoise()
-	{
-		Console.WriteLine(EngineNoise);
-	}
-	public void MakeHonkNoise()
-	{
-		Console.WriteLine(HonkNoise);
-	}
 }

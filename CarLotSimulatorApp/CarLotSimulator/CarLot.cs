@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-public class CarLot
+namespace CarLotSimulator
 {
-	public CarLot()
+	public class CarLot
 	{
+		public static int NumberOfCars = 0;
+		public List<Car> Cars { get; set; }
 	}
 
-	public List<Car> Cars { get; set; }
 }

@@ -8,8 +8,11 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             var carLot = new CarLot();
+            Console.WriteLine($"There are {CarLot.NumberOfCars} car(s) in the car lot");
             var car1 = new Car() { Make = "Ford", Model = "Mustang", Year = 1965, IsDriveable = true};
+            Console.WriteLine($"There are {CarLot.NumberOfCars} car(s) in the car lot");
             var car2 = new Car();
+            Console.WriteLine($"There are {CarLot.NumberOfCars} car(s) in the car lot");
             var car3 = new Car()
             {
                 Make = "Honda",
@@ -17,6 +20,7 @@ namespace CarLotSimulator
                 Year = 1972,
                 IsDriveable = true,
             };
+            Console.WriteLine($"There are {CarLot.NumberOfCars} car(s) in the car lot");
 
             car2.Make = "Chevorlet";
             car2.Model = "Corvette";
